@@ -1,27 +1,33 @@
 # Production-style-AWS-setup
+highly available, production-ready AWS VPC architecture designed for secure web applications.
+
  ![Image Alt](https://docs.aws.amazon.com/images/vpc/latest/userguide/images/vpc-example-private-subnets.png)
  
- This is project which I have worked on with following aws services:
+Services:
  
--VPC
+VPC,Subnets(private and public),Internet Gateway,Nat Gateway,Route Tables,EC2(Bastion Host),Application Load Balancer,Target Group
+Security Groups
 
--Subnets(private and public)
+Implementation Steps (Manual AWS Console)
 
--Internet Gateway
+-Created a custom VPC with CIDR block
 
--Nat Gateway
+-Created public and private subnets across two Availability Zones
 
--Route Tables
+-Attached an Internet Gateway to the VPC
 
--EC2(Bastion Host)
+-Configured route tables for public and private subnets
 
--Application Load Balancer
+-Deployed NAT Gateway in a public subnet
 
--Target Group
+-Launched EC2 instances in private subnets
 
--Security Groups
+-Created an Application Load Balancer in public subnets
 
-This all are services that used for traffic flow,except the autoscaling and s3 gateway. 
+-Configured Target Groups and health checks
 
-And used bastion host to login into private instances by scp command.
+-Attached Security Groups with controlled inbound/outbound rules
+
+-Verified application access via ALB DNS
+
 
