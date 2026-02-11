@@ -6,7 +6,7 @@ highly available, production-ready AWS VPC architecture designed for secure web 
 Services:
  
 VPC,Subnets(private and public),Internet Gateway,Nat Gateway,Route Tables,EC2(Bastion Host),Application Load Balancer,Target Group
-Security Groups
+Security Groups,Auto Scaling Group(ASG)
 
 Implementation Steps (Manual AWS Console)
 
@@ -27,6 +27,8 @@ Implementation Steps (Manual AWS Console)
 -Configured Target Groups and health checks
 
 -Attached Security Groups with controlled inbound/outbound rules
+
+-Attached Auto Scaling Group (ASG)
 
 -Verified application access via ALB DNS
 
